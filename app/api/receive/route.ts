@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // In-memory array to store received data
-let receivedData: string[] = [];
+const receivedData: string[] = [];
 
 export async function POST(request: NextRequest) {
   try {
@@ -39,5 +39,3 @@ export async function GET() {
     count: receivedData.length,
   });
 }
-
-export { receivedData };
