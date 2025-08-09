@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// Configure this route to be dynamic (not statically exported)
+/*
+The error was occurring because your Next.js application was trying to statically export an API route that requires server-side functionality. 
+API routes with dynamic behavior (like storing data in memory, handling POST requests) cannot be statically exported.
+*/
+
+export const dynamic = "force-dynamic";
+
 // In-memory array to store received data
 const receivedData: string[] = [];
 

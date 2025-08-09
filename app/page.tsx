@@ -19,10 +19,6 @@ export default function Home() {
     }
 
     fetchData();
-    // Set up polling to refresh data every 5 seconds
-    const intervalId = setInterval(fetchData, 5000);
-
-    return () => clearInterval(intervalId);
   }, []);
 
   return (
